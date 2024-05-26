@@ -1,28 +1,30 @@
 import Link from "next/link";
 import { db } from "../server/db";
-
-const mockURLs = [
-  "https://utfs.io/f/fb6b61c8-0357-442b-b803-abbba02a70b2-fg65q1.jpg",
-  "https://utfs.io/f/2adc63b9-0f1a-49c4-9ab6-e48ff97955ee-lwbpxt.webp",
-  "https://utfs.io/f/da0f308c-9d25-4a5d-8d55-3993b49f2621-mwmgsg.webp",
-  "https://utfs.io/f/bf2b5a97-8523-46fe-a388-26d49a5bf074-dk1xgu.png",
-]
+import { SignIn, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export const dynamic = "force-dynamic";
 
-const mockImages = mockURLs.map((url, index) => ({
-  id: index + 1,
-  url
-}));
+async function Images(){
+  const images = await db.query.images.findMany();
+
+  return (
+    <div className="flex flex-wrap gap-4">{[...images, ...images, ...images].map(
+      ({ id, name, url }) => <div key={id} className="w-48"><img src={url} />{name}</div>
+    )}</div>
+  )
+}
 
 export default async function HomePage() {
-  const images = await db.query.images.findMany();
+  
   // console.log(images);
   return (
     <main className="">
-      <div className="flex flex-wrap gap-4">{[...images, ...images, ...images].map(
-        ({ id, url }) => <div key={id} className="w-48"><img src={url} /></div>
-      )}</div>
+      <SignedOut>
+        <div className="h-full w-full text-2xl text-center">You are not signed in, please sign in using the above SignIn button to continue.</div>
+      </SignedOut>
+      <SignedIn>
+        <Images />
+      </SignedIn>
     </main>
   );
 }

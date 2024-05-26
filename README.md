@@ -7,6 +7,7 @@
 - [X] connect db with UI
 - [X] authentication
 - [ ] add image upload
+- [ ] "taint" (server only)
 - [ ] Error management (w/ Sentry)
 - [ ] Routing for images (with parallel routes)
 - [ ] Delete button (w/ Server actions)
