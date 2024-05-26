@@ -1,7 +1,8 @@
 # Learning T3 App
 
-- [ ] Deploy
-- [ ] Build basic UI with mock data first
+- [X] Deploy
+- [X] Build basic UI with mock data first
+- [X] Tidy up build process
 - [ ] Setup db
 - [ ] connect db with UI
 - [ ] authentication
