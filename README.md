@@ -3,8 +3,8 @@
 - [X] Deploy
 - [X] Build basic UI with mock data first
 - [X] Tidy up build process
-- [ ] Setup db
-- [ ] connect db with UI
+- [X] Setup db
+- [X] connect db with UI
 - [ ] authentication
 - [ ] add image upload
 - [ ] Error management (w/ Sentry)
