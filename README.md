@@ -5,7 +5,7 @@
 - [X] Tidy up build process
 - [X] Setup db
 - [X] connect db with UI
-- [ ] authentication
+- [X] authentication
 - [ ] add image upload
 - [ ] Error management (w/ Sentry)
 - [ ] Routing for images (with parallel routes)
