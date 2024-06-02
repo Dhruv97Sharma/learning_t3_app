@@ -6,7 +6,7 @@
 - [X] Setup db
 - [X] connect db with UI
 - [X] authentication
-- [ ] add image upload
+- [X] add image upload
 - [ ] "taint" (server only)
 - [ ] Use Next Image component
 - [ ] Error management (w/ Sentry)
