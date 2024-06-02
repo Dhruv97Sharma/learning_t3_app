@@ -7,7 +7,7 @@
 - [X] connect db with UI
 - [X] authentication
 - [X] add image upload
-- [ ] "taint" (server only)
+- [X] "taint" (server only)
 - [ ] Use Next Image component
 - [ ] Error management (w/ Sentry)
 - [ ] Routing for images (with parallel routes)
