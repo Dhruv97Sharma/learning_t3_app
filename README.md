@@ -8,7 +8,7 @@
 - [X] authentication
 - [X] add image upload
 - [X] "taint" (server only)
-- [ ] Use Next Image component
+- [X] Use Next Image component
 - [ ] Error management (w/ Sentry)
 - [ ] Routing for images (with parallel routes)
 - [ ] Delete button (w/ Server actions)
